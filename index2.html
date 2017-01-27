@@ -1,3 +1,5 @@
+<!-- attribute and class binding -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,9 +18,7 @@
     <div id="root">
 
 
-      <!-- <button v-bind:title="title">hover over me</button> -->
-      <!-- equivalent -->
-      <button  :class="{ 'is-loading': isLoading }" @click="toggleClass">click me</button>
+      <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Click Me</button>
 
 
     </div>
@@ -28,20 +28,17 @@
 
 
 
-      new Vue({
+      var app = new Vue({
         el: '#root',
         data: {
-
           isLoading: false
-
         },
         methods: {
           toggleClass() {
-            this.isLoading = true;
+            this.isLoading = true
           }
         }
-
-      })
+      });
 
 
 
