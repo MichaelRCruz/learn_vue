@@ -16,9 +16,11 @@
 
     <div id="root">
 
-      <h2>Complete Tasks</h2>
+      <h2>All Tasks</h2>
       <ul>
-        <li v-for="task in tasks" v-text="task.description"></li>
+        <li v-for="task in tasks">{{ task.description }}
+          <button @click="toggle">done</button>
+        </li>
       </ul>
 
       <h2>Incomplete Tasks</h2>
@@ -39,19 +41,24 @@
         data: {
           message: 'Hello, world',
           tasks: [
-            { description: 'write code', completed: true },
+            { description: 'write code', completed: false },
+            { description: 'rewrite resume', completed: false },
+            { description: 'call mom', completed: false },
             { description: 'return clothes to store', completed: false },
             { description: 'be awesome', completed: false },
             { description: 'go running', completed: false },
-            { description: 'profit', completed: true }
+            { description: 'profit', completed: false }
           ]
         },
         computed: {
           incompleteTasks() {
             return this.tasks.filter(task => !task.completed);
           }
-
-
+        },
+        methods: {
+          toggle() {
+            return this.tasks.completed = true;
+          }
         }
       });
 
