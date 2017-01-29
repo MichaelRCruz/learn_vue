@@ -12,7 +12,6 @@ Vue.component('modal', {
       <button class="modal-close" @click="$emit('close')"></button>
     </div>
   `
-
 })
 
 new Vue({
