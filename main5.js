@@ -1,6 +1,6 @@
 Vue.component('message',{
-
   props: ['title', 'body'],
+
   data() {
     return {
       isVisible: true
@@ -17,15 +17,13 @@ Vue.component('message',{
         {{ body }}
     </article>
   `,
+  
   methods: {
     hideModal() {
       this.isVisible = false;
     }
   }
 });
-
-
-
 
 new Vue({
   el: '#root'
