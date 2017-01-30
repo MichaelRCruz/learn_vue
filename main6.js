@@ -1,7 +1,7 @@
 Vue.component('modal', {
   template: `
     <div class="modal is-active">
-      <div class="modal-background"></div>
+      <div class="modal-background is-fullwidth"></div>
       <div class="modal-content">
         <div class="box">
 
